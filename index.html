@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>NoVir 2.4 — Абсолютный контроль над Windows</title>
+    <title>NoVir — Абсолютный контроль над Windows</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -232,12 +232,208 @@
             .doc-content-box { padding: 30px 20px; }
         }
     </style>
+
+<style id="novir-design-refresh">
+:root{
+  --bg-dark:#080b0e;
+  --bg-card:#10151a;
+  --bg-card-soft:#0d1216;
+  --primary:#62f2b3;
+  --primary-dim:rgba(98,242,179,.08);
+  --primary-glow:rgba(98,242,179,.18);
+  --text-main:#f5f7f8;
+  --text-muted:#8e9aa3;
+  --border-light:rgba(255,255,255,.075);
+  --border-hover:rgba(98,242,179,.26);
+}
+*{scrollbar-width:thin;scrollbar-color:rgba(98,242,179,.35) #080b0e}
+body{
+  background:
+    radial-gradient(700px 420px at 50% -90px,rgba(98,242,179,.075),transparent 72%),
+    radial-gradient(500px 400px at 100% 28%,rgba(98,242,179,.035),transparent 72%),
+    #080b0e;
+}
+body:after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.018;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  z-index:9999;
+}
+header{
+  background:rgba(8,11,14,.76);
+  border-bottom:1px solid rgba(255,255,255,.055);
+  box-shadow:0 12px 35px rgba(0,0,0,.16);
+}
+.navbar{padding:14px 0}
+.logo{letter-spacing:-.035em}
+.logo i{filter:drop-shadow(0 0 12px rgba(98,242,179,.3))}
+.nav-links{gap:26px}
+.nav-links a{font-size:.82rem;letter-spacing:.8px}
+.nav-links a:hover{transform:translateY(-1px)}
+.hero{
+  min-height:720px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  padding:150px 0 90px;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:620px;height:360px;
+  left:50%;top:70px;
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse,rgba(98,242,179,.09),transparent 68%);
+  filter:blur(4px);
+  pointer-events:none;
+}
+.hero .container{position:relative;z-index:1}
+.badge{
+  border:1px solid rgba(98,242,179,.16);
+  box-shadow:0 8px 30px rgba(0,0,0,.15);
+  text-transform:uppercase;
+}
+.hero h1{
+  font-size:clamp(3rem,7vw,5.7rem);
+  letter-spacing:-.065em;
+  line-height:.98;
+  margin-bottom:28px;
+}
+.hero h1 br{display:block}
+.hero p{
+  font-size:1.08rem;
+  line-height:1.8;
+  color:#a7b0b7;
+}
+.hero .btn{
+  min-width:190px;
+  justify-content:center;
+  border-radius:9px;
+}
+.btn{
+  box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+.btn-fill{
+  box-shadow:0 10px 35px rgba(98,242,179,.13);
+}
+.links-grid{margin-top:26px}
+.links-grid a{font-size:.88rem}
+section[id="features"]{padding-top:70px!important}
+.section-title{
+  font-size:2.5rem;
+  letter-spacing:-.045em;
+}
+.features-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:1000px;
+}
+.feature-card{
+  min-height:215px;
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+  padding:32px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.022),transparent 55%),
+    #10151a;
+  box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+.feature-card:after{
+  content:"";
+  position:absolute;
+  right:-80px;bottom:-90px;
+  width:190px;height:190px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(98,242,179,.07),transparent 68%);
+  pointer-events:none;
+}
+.feature-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--border-hover);
+  box-shadow:0 22px 55px rgba(0,0,0,.28);
+}
+.feature-icon{
+  width:48px;height:48px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(98,242,179,.13);
+  border-radius:12px;
+  background:rgba(98,242,179,.055);
+  font-size:1.35rem;
+}
+.feature-card h3{margin-top:22px}
+.feature-card p{line-height:1.7}
+#documentation{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.012),transparent 20%),
+    rgba(98,242,179,.008)!important;
+}
+.doc-layout{grid-template-columns:235px 1fr;gap:42px}
+.sidebar-title{font-size:.82rem;opacity:.85}
+.doc-nav li{
+  border:1px solid transparent;
+  padding:13px 16px;
+}
+.doc-nav li.active{
+  border-color:rgba(98,242,179,.15);
+  box-shadow:inset 3px 0 var(--primary);
+}
+.doc-content-box{
+  border-radius:16px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.022),transparent 38%),
+    #10151a;
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
+}
+.doc-title{
+  letter-spacing:-.04em;
+}
+.doc-section-title{margin-top:44px}
+.alert-box{
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+.details-section{
+  border-top-color:rgba(255,255,255,.055);
+}
+.detail-row{
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:26px 28px;
+  border:1px solid rgba(255,255,255,.045);
+  border-radius:14px;
+  background:rgba(255,255,255,.012);
+}
+.detail-icon{
+  width:62px;height:62px;
+  border-radius:15px;
+}
+footer{background:#06080a}
+.copyright{border-top-color:rgba(255,255,255,.055)}
+@media(max-width:900px){
+  .hero{min-height:auto;padding:145px 0 85px}
+  .features-grid{grid-template-columns:1fr}
+  .doc-layout{grid-template-columns:1fr}
+  .sidebar{position:relative}
+}
+@media(max-width:600px){
+  .hero h1{font-size:clamp(2.65rem,13vw,4rem)}
+  .hero .btn{width:100%}
+  .features-grid{grid-template-columns:1fr}
+  .feature-card{min-height:auto}
+  .detail-row{padding:24px 20px}
+  .doc-content-box{padding:28px 20px}
+}
+</style>
+
 </head>
 <body>
     <header>
         <div class="container navbar">
             <a href="#" class="logo">
-                <i class="fas fa-shield-alt"></i> NoVir 2.4
+                <i class="fas fa-shield-alt"></i> NoVir <span style="font-size:.68rem;font-weight:600;letter-spacing:.08em;color:var(--primary);opacity:.8;">ACTIVE</span>
             </a>
             <div class="hamburger"><span></span><span></span><span></span></div>
             <ul class="nav-links">
@@ -250,7 +446,7 @@
 
     <section class="hero">
         <div class="container">
-            <div class="badge">СИСТЕМА ВОССТАНОВЛЕНИЯ WINDOWS</div>
+            <div class="badge">2. АКТИВНАЯ РАЗРАБОТКА</div>
             <h1>Абсолютный контроль<br/>над вашей системой</h1>
             <p>Продвинутая утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений.</p>
             
@@ -420,7 +616,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo" style="margin-bottom: 15px;"><i class="fas fa-shield-alt"></i> NoVir 2.4</div>
+                    <div class="logo" style="margin-bottom: 15px;"><i class="fas fa-shield-alt"></i> NoVir</div>
                     <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Профессиональное ПО для диагностики и хирургического удаления последствий вредоносного кода в ОС Windows.</p>
                 </div>
                 <div>
