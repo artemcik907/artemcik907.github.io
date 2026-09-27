@@ -466,12 +466,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.4.1 · Активная разработка</div>
+            <div class="kicker"><span class="dot"></span> v2.4.2 · Активная разработка</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
             <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.4.1
+                    <i class="fas fa-download"></i> Загрузить v2.4.2
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -565,7 +565,7 @@
                     <span class="mod-num">05</span>
                     <div class="mod-icon"><i class="fas fa-terminal"></i></div>
                 </div>
-                <div class="mod-label">BUILT-IN TERMINAL &nbsp;<span style="background:var(--g);color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.4.1</span></div>
+                <div class="mod-label">BUILT-IN TERMINAL &nbsp;<span style="background:var(--g);color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.4.2</span></div>
                 <h3>NoVir CMD</h3>
                 <p>Встроенная командная строка с 5-уровневым обходом блокировок. Если вирус заблокировал стандартный CMD через Image File Execution Options или групповые политики — NoVir CMD запустится через резервный метод: копия исполняемого файла в Temp, UNC-путь, SysNative или PowerShell-обёртку. Интерфейс в стиле классического Windows CMD.</p>
                 <div class="mod-tags" style="margin-top:18px">
@@ -646,7 +646,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.4.1</div>
+                <div class="stat-num">2.4.2</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -707,7 +707,7 @@
                     <div class="req-row"><span class="req-key">Права</span><span class="req-val">Администратор (обязательно — для правки реестра)</span></div>
                     <div class="req-row"><span class="req-key">RAM</span><span class="req-val">от 256 МБ (рекомендуется 512 МБ)</span></div>
                     <div class="req-row"><span class="req-key">Диск</span><span class="req-val">~50 МБ для программы + место под бэкапы реестра</span></div>
-                    <div class="req-row"><span class="req-key">Сеть</span><span class="req-val">Не требуется — работает полностью оффлайн</span></div>
+                    <div class="req-row"><span class="req-key">Сеть</span><span class="req-val">Требуеться для роботы с ИИ - для конкретных задач НЕТ</span></div>
                     <div class="req-row"><span class="req-key">Runtime</span><span class="req-val">Встроен в дистрибутив — ничего не нужно устанавливать</span></div>
                     <div class="req-row"><span class="req-key">Антивирус</span><span class="req-val">Может потребоваться добавить в исключения (работа с реестром)</span></div>
                 </div>
@@ -723,7 +723,19 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.4.1 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.4.2 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026</div>
+                <ul class="cl-changes">
+                    <li>Добавлен <strong>NoVir AI Assistant</strong> — встроенный ИИ-чат на базе Groq с памятью диалога</li>
+                    <li>ИИ автоматически предлагает помощь через 5 секунд после обнаружения проблем</li>
+                    <li>ИИ может вносить изменения в систему после разрешения пользователя (EXECUTE-режим)</li>
+                    <li>Исправлена диагностика DNS — теперь реальная проверка через nslookup вместо ложных срабатываний</li>
+                    <li>Исправлена диагностика TCP/IP — проверка Winsock каталога вместо постоянного WARNING</li>
+                    <li>Исправлена диагностика BCD — корректная работа на UEFI системах и без прав администратора</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.4.1</div>
                 <div class="cl-date">2026</div>
                 <ul class="cl-changes">
                     <li>Добавлен модуль <strong>NoVir CMD</strong> — независимая командная строка с 5 уровнями запуска</li>
@@ -799,6 +811,9 @@
                     </li>
                     <li onclick="switchTab('mod5',this)">
                         <span class="nav-num">06</span> Лог и Языки
+                    </li>
+                    <li onclick="switchTab('modai',this)">
+                        <span class="nav-num" style="color:#00e87a">AI</span> NoVir AI Assistant
                     </li>
                 </ul>
                 <div class="help-box">
@@ -975,6 +990,82 @@
                         </ul>
                         <br>
                         <p style="color:var(--muted);font-size:.9rem">Переключение языка — мгновенное, без перезапуска. Все системные сообщения и лог переводятся в реальном времени.</p>
+                    </div>
+                </div>
+
+                <!-- MOD_AI -->
+                <div id="modai" class="tab-pane">
+                    <h1 class="doc-title"><i class="fas fa-robot"></i> NoVir AI Assistant <span class="doc-badge" style="background:linear-gradient(135deg,#00e87a,#00b8ff);color:#000">NEW</span></h1>
+                    <p class="doc-lead">Встроенный интеллектуальный ассистент, который понимает проблемы твоей системы и помогает их решить — в диалоге, с памятью и возможностью вносить изменения прямо в Windows.</p>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Что такое NoVir AI</div>
+                        <p style="color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:12px">
+                            NoVir AI — это диалоговый ИИ-ассистент, работающий на базе языковой модели <strong style="color:#e0e0e0">openai/gpt-oss-120b</strong> через API Groq. Он специально настроен как эксперт по восстановлению Windows: знает реестр, сетевые параметры, загрузчики, политики и типичные вирусные паттерны. Отвечает кратко и по делу.
+                        </p>
+                        <ul class="doc-list">
+                            <li><strong>Работает локально:</strong> Запросы уходят напрямую на серверы Groq — никаких посредников. Данные о твоей системе передаются только те, что ты видишь в тексте диалога.</li>
+                            <li><strong>Память диалога:</strong> ИИ помнит всё, что было сказано в текущей сессии. Ты можешь уточнять, переспрашивать и продолжать с того места, где остановился.</li>
+                            <li><strong>Ключ зашифрован:</strong> API-ключ хранится в программе в зашифрованном виде (XOR-обфускация), чтобы его нельзя было найти поиском по коду.</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Как ИИ запускается автоматически</div>
+                        <ul class="doc-list">
+                            <li><strong>Шаг 1 — Сканирование:</strong> Ты нажимаешь «Запустить сканирование» в разделе «Умная Диагностика».</li>
+                            <li><strong>Шаг 2 — Таймер бездействия:</strong> Если программа нашла проблемы и ты не нажал «Исправить найденное» в течение <strong style="color:#00e87a">5 секунд</strong>, ИИ сам предлагает помощь.</li>
+                            <li><strong>Шаг 3 — Всплывающее окно:</strong> Появляется диалог <em>«Не знаешь как решить проблему? NoVir AI поможет!»</em> — нажми Да, чтобы открыть чат.</li>
+                            <li><strong>Шаг 4 — Автопромпт:</strong> ИИ автоматически получает список найденных проблем и сразу начинает объяснять что с ними делать. Тебе не нужно ничего вводить вручную.</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Как работает диалог</div>
+                        <ul class="doc-list">
+                            <li><strong>Ты пишешь — ИИ отвечает:</strong> Поле ввода внизу окна. Нажми Enter или кнопку «Отправить».</li>
+                            <li><strong>Уточняй сколько угодно:</strong> Не понял ответ — переспроси. ИИ помнит контекст и адаптирует объяснение.</li>
+                            <li><strong>Три цвета в чате:</strong> <span style="color:#3b82f6">■ Синий</span> — твои сообщения. <span style="color:#00e87a">■ Зелёный</span> — ответы ИИ. <span style="color:#f59e0b">■ Жёлтый</span> — системные уведомления о выполненных командах.</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Режим внесения изменений (EXECUTE)</div>
+                        <p style="color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:12px">
+                            ИИ умеет не только советовать, но и действовать. Если он считает, что проблему можно решить командой — он спросит разрешения.
+                        </p>
+                        <ul class="doc-list">
+                            <li><strong>Запрос разрешения:</strong> ИИ пишет «Могу ли я внести изменения в системе?» — ты отвечаешь да / нет / подробности.</li>
+                            <li><strong>Диалог подтверждения:</strong> Перед выполнением появляется отдельное окно с точной командой, которую хочет запустить ИИ. Ты видишь её полностью и решаешь — разрешить или нет.</li>
+                            <li><strong>Выполнение и анализ:</strong> Если разрешил — команда выполняется, вывод автоматически отправляется обратно ИИ. Он читает результат и предлагает следующий шаг.</li>
+                            <li><strong>Отказ:</strong> Если нажал «Нет» — ИИ предложит альтернативный способ или объяснит как сделать вручную.</li>
+                        </ul>
+                        <div class="warn-box">
+                            <h5><i class="fas fa-shield-alt"></i> Безопасность</h5>
+                            <p>ИИ не может ничего сделать без твоего явного подтверждения. Каждая команда показывается в окне подтверждения до выполнения. Ты всегда в контроле.</p>
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Примеры того, что умеет ИИ</div>
+                        <ul class="doc-list">
+                            <li>Объяснить что означает конкретная ошибка диагностики простыми словами</li>
+                            <li>Сбросить настройки DNS и очистить кэш (<code>ipconfig /flushdns</code>, <code>netsh int ip reset</code>)</li>
+                            <li>Разблокировать Диспетчер задач или Regedit через реестр</li>
+                            <li>Очистить автозапуск от подозрительных записей</li>
+                            <li>Проверить состояние служб Windows и включить заблокированные</li>
+                            <li>Дать инструкции по восстановлению BCD или SafeBoot-ключей</li>
+                            <li>Ответить на любой вопрос по Windows — даже не связанный со сканированием</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Ограничения</div>
+                        <ul class="doc-list">
+                            <li><strong>Требует интернет:</strong> ИИ работает через облачный API Groq. Без подключения к сети чат недоступен.</li>
+                            <li><strong>Память сбрасывается:</strong> При закрытии окна чата история диалога очищается. Новый сеанс — новый диалог.</li>
+                            <li><strong>Не заменяет специалиста:</strong> ИИ очень умный, но в критических случаях (форматирование, восстановление после шифровальщика) всегда делай резервную копию перед применением советов.</li>
+                        </ul>
                     </div>
                 </div>
 
