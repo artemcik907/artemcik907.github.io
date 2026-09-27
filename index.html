@@ -466,12 +466,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.4 · Активная разработка</div>
+            <div class="kicker"><span class="dot"></span> v2.4.1 · Активная разработка</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
             <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.4
+                    <i class="fas fa-download"></i> Загрузить v2.4.1
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -498,7 +498,7 @@
                 <h2 class="sec-title">Архитектура системы</h2>
                 <p class="sec-sub" style="margin-top:10px">Четыре независимых модуля — каждый отвечает за отдельный этап восстановления Windows.</p>
             </div>
-            <div class="mod-count"><strong>04</strong><span>МОДУЛЯ</span></div>
+            <div class="mod-count"><strong>05</strong><span>МОДУЛЕЙ</span></div>
         </div>
 
         <div class="modules-grid">
@@ -557,6 +557,20 @@
                 <div class="mod-tags">
                     <span class="hi">REGEDIT</span>
                     <span>TASKMGR</span><span>ASSOC</span><span>DESKTOP</span>
+                </div>
+            </div>
+            <!-- 05 NEW -->
+            <div class="mod-card" style="grid-column:1/-1">
+                <div class="mod-top">
+                    <span class="mod-num">05</span>
+                    <div class="mod-icon"><i class="fas fa-terminal"></i></div>
+                </div>
+                <div class="mod-label">BUILT-IN TERMINAL &nbsp;<span style="background:var(--g);color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.4.1</span></div>
+                <h3>NoVir CMD</h3>
+                <p>Встроенная командная строка с 5-уровневым обходом блокировок. Если вирус заблокировал стандартный CMD через Image File Execution Options или групповые политики — NoVir CMD запустится через резервный метод: копия исполняемого файла в Temp, UNC-путь, SysNative или PowerShell-обёртку. Интерфейс в стиле классического Windows CMD.</p>
+                <div class="mod-tags" style="margin-top:18px">
+                    <span class="hi">5 МЕТОДОВ ЗАПУСКА</span>
+                    <span>IFEO BYPASS</span><span>UNC PATH</span><span>SYSNATIVE</span><span>POWERSHELL</span><span>COPY TEMP</span>
                 </div>
             </div>
         </div>
@@ -632,7 +646,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.4</div>
+                <div class="stat-num">2.4.1</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -709,7 +723,17 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.4 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.4.1 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026</div>
+                <ul class="cl-changes">
+                    <li>Добавлен модуль <strong>NoVir CMD</strong> — независимая командная строка с 5 уровнями запуска</li>
+                    <li>Полное исправление системы переводов: теперь DE, PL, FR работают корректно</li>
+                    <li>Добавлен перевод интерфейса (Бэкапы, Диагностика, Запуск сканирования и др.)</li>
+                    <li>Улучшен обход блокировок (IFEO bypass, UNC path, SysNative, PowerShell)</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.4</div>
                 <div class="cl-date">2026</div>
                 <ul class="cl-changes">
                     <li>Добавлен модуль <strong>NoVir Explorer</strong> — независимый файловый менеджер</li>
@@ -770,8 +794,11 @@
                     <li onclick="switchTab('mod4',this)">
                         <span class="nav-num">04</span> Утилиты Фикса
                     </li>
+                    <li onclick="switchTab('mod6',this)">
+                        <span class="nav-num">05</span> Командная строка
+                    </li>
                     <li onclick="switchTab('mod5',this)">
-                        <span class="nav-num">05</span> Лог и Языки
+                        <span class="nav-num">06</span> Лог и Языки
                     </li>
                 </ul>
                 <div class="help-box">
@@ -902,6 +929,22 @@
                     <div class="warn-box">
                         <h5><i class="fas fa-exclamation-triangle"></i> Внимание</h5>
                         <p>Перед применением фиксов рекомендуется создать бэкап реестра через вкладку «Бэкап и Откат».</p>
+                    </div>
+                </div>
+
+                <!-- MOD_06 -->
+                <div id="mod6" class="tab-pane">
+                    <h1 class="doc-title"><i class="fas fa-terminal"></i> Командная строка <span class="doc-badge">MOD_06</span></h1>
+                    <p class="doc-lead">Встроенная консоль NoVir CMD — инструмент последней надежды для выполнения команд, когда система заблокирована малварью.</p>
+                    <div class="doc-section">
+                        <div class="doc-section-title">5 уровней обхода блокировок</div>
+                        <ul class="doc-list">
+                            <li><strong>Copy Temp:</strong> Копирует <code>cmd.exe</code> в папку <code>Temp</code> под именем <code>svchost_helper.exe</code>. Обходит блокировки по имени файла (IFEO).</li>
+                            <li><strong>UNC-путь:</strong> Вызов через <code>\\?\C:\Windows\System32\cmd.exe</code> для обхода хуков файловой системы.</li>
+                            <li><strong>SysNative:</strong> Запуск через алиас <code>SysNative</code> для обхода WoW64-редиректа на 64-битных ОС.</li>
+                            <li><strong>PowerShell Wrapper:</strong> Запускает <code>cmd.exe</code> внутри оболочки PowerShell (обходит групповые политики DisableCMD).</li>
+                            <li><strong>Direct Launch:</strong> Прямой запуск оригинального файла.</li>
+                        </ul>
                     </div>
                 </div>
 
