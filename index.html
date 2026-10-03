@@ -466,12 +466,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.4.2 · Активная разработка</div>
+            <div class="kicker"><span class="dot"></span> v2.5 · Recovery Engine</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
-            <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows.</p>
+            <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows. Теперь с полноценным Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.4.2
+                    <i class="fas fa-download"></i> Загрузить v2.5
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -480,7 +480,7 @@
                 <div class="hero-divider"></div>
                 <div class="hero-stat"><strong>6</strong><span>ЯЗЫКОВ</span></div>
                 <div class="hero-divider"></div>
-                <div class="hero-stat"><strong>Точный</strong><span>АУДИТ БЕЗ ПАНИКИ</span></div>
+                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5</span></div>
                 <div class="hero-divider"></div>
                 <a href="https://github.com/artemcik907/NoVir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://t.me/Fuucksociety67" target="_blank"><i class="fab fa-telegram"></i> Разработчик</a>
@@ -498,7 +498,7 @@
                 <h2 class="sec-title">Архитектура системы</h2>
                 <p class="sec-sub" style="margin-top:10px">Четыре независимых модуля — каждый отвечает за отдельный этап восстановления Windows.</p>
             </div>
-            <div class="mod-count"><strong>05</strong><span>МОДУЛЕЙ</span></div>
+            <div class="mod-count"><strong>07</strong><span>МОДУЛЕЙ</span></div>
         </div>
 
         <div class="modules-grid">
@@ -510,7 +510,7 @@
                 </div>
                 <div class="mod-label">DIAGNOSTIC CENTER</div>
                 <h3>Smart Diagnostics</h3>
-                <p>Умный аудит 12 критических точек системы: файл Hosts, загрузчик BCD, стек TCP/IP, DNS, Proxy, WMI, системные службы, Защитник Windows и безопасный режим. Показывает точный статус каждого узла — без слепых фиксов.</p>
+                <p>Умный аудит 12 критических точек системы: файл Hosts, загрузчик BCD, стек TCP/IP, DNS, Proxy, WMI, системные службы, Защитник Windows и безопасный режим. После скана — автоматический анализ гипотез причин с пояснением.</p>
                 <div class="mod-tags">
                     <span class="hi">12 точек</span>
                     <span>Hosts</span><span>BCD</span><span>DNS</span><span>TCP/IP</span>
@@ -521,20 +521,34 @@
             <div class="mod-card">
                 <div class="mod-top">
                     <span class="mod-num">02</span>
-                    <div class="mod-icon"><i class="fas fa-history"></i></div>
+                    <div class="mod-icon"><i class="fas fa-database"></i></div>
                 </div>
-                <div class="mod-label">SAFETY LAYER</div>
-                <h3>Rollback Manager</h3>
-                <p>Перед каждым опасным действием — автоматический дамп реестра в фоне. Умный откат позволяет отменить любые изменения по отдельности: просматривайте журнал правок и восстанавливайте только то, что нужно.</p>
+                <div class="mod-label">RECOVERY ENGINE <span style="background:var(--g);color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.5</span></div>
+                <h3>Recovery Point</h3>
+                <p>Полный снимок системы перед каждым исправлением: экспорт ключей реестра, сетевой dump, конфигурация служб, BCD и список драйверов с контрольными суммами. Автоматический откат для реестра и сетевых настроек; BCD/службы — ручной откат с инструкцией.</p>
                 <div class="mod-tags">
-                    <span class="hi">BACKUP</span>
-                    <span>SNAPSHOTS</span><span>HKLM\SYSTEM</span><span>ROLLBACK</span>
+                    <span class="hi">SNAPSHOT</span>
+                    <span>REG EXPORT</span><span>NETWORK DUMP</span><span>BCD</span><span>ROLLBACK</span>
                 </div>
             </div>
             <!-- 03 -->
             <div class="mod-card">
                 <div class="mod-top">
                     <span class="mod-num">03</span>
+                    <div class="mod-icon"><i class="fas fa-history"></i></div>
+                </div>
+                <div class="mod-label">SAFETY LAYER</div>
+                <h3>Rollback Manager</h3>
+                <p>Перед каждым опасным действием — автоматический дамп реестра в фоне. Умный откат позволяет отменить изменения по отдельности: просматривайте журнал правок и восстанавливайте только то, что нужно.</p>
+                <div class="mod-tags">
+                    <span class="hi">BACKUP</span>
+                    <span>SNAPSHOTS</span><span>HKLM\SYSTEM</span><span>ROLLBACK</span>
+                </div>
+            </div>
+            <!-- 04 -->
+            <div class="mod-card">
+                <div class="mod-top">
+                    <span class="mod-num">04</span>
                     <div class="mod-icon"><i class="fas fa-folder-open"></i></div>
                 </div>
                 <div class="mod-label">FILE ACCESS</div>
@@ -545,32 +559,46 @@
                     <span>HIDDEN</span><span>SYSTEM</span><span>SEARCH</span>
                 </div>
             </div>
-            <!-- 04 -->
+            <!-- 05 -->
             <div class="mod-card">
                 <div class="mod-top">
-                    <span class="mod-num">04</span>
+                    <span class="mod-num">05</span>
                     <div class="mod-icon"><i class="fas fa-tools"></i></div>
                 </div>
                 <div class="mod-label">RECOVERY TOOLS</div>
                 <h3>Fix Tools</h3>
-                <p>Набор хирургических инструментов для снятия вирусных блокировок: разблокировка Regedit и Диспетчера, восстановление ассоциаций файлов, фикс рабочего стола, перезапуск Explorer с очисткой кэша иконок.</p>
+                <p>Набор хирургических инструментов для снятия вирусных блокировок: разблокировка Regedit и Диспетчера, восстановление ассоциаций файлов, фикс рабочего стола, WinRE-загрузка, восстановление драйверов, корреляция Malware-процессов.</p>
                 <div class="mod-tags">
                     <span class="hi">REGEDIT</span>
-                    <span>TASKMGR</span><span>ASSOC</span><span>DESKTOP</span>
+                    <span>TASKMGR</span><span>ASSOC</span><span>WinRE</span><span>DRIVERS</span>
                 </div>
             </div>
-            <!-- 05 NEW -->
-            <div class="mod-card" style="grid-column:1/-1">
+            <!-- 06 NEW -->
+            <div class="mod-card">
                 <div class="mod-top">
-                    <span class="mod-num">05</span>
+                    <span class="mod-num">06</span>
                     <div class="mod-icon"><i class="fas fa-terminal"></i></div>
                 </div>
-                <div class="mod-label">BUILT-IN TERMINAL &nbsp;<span style="background:var(--g);color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.4.2</span></div>
+                <div class="mod-label">BUILT-IN TERMINAL</div>
                 <h3>NoVir CMD</h3>
-                <p>Встроенная командная строка с 5-уровневым обходом блокировок. Если вирус заблокировал стандартный CMD через Image File Execution Options или групповые политики — NoVir CMD запустится через резервный метод: копия исполняемого файла в Temp, UNC-путь, SysNative или PowerShell-обёртку. Интерфейс в стиле классического Windows CMD.</p>
+                <p>Встроенная командная строка с 5-уровневым обходом блокировок. Если вирус заблокировал стандартный CMD через Image File Execution Options или групповые политики — NoVir CMD запустится через резервный метод: копия в Temp, UNC-путь, SysNative или PowerShell-обёртку.</p>
+                <div class="mod-tags">
+                    <span class="hi">5 МЕТОДОВ</span>
+                    <span>IFEO BYPASS</span><span>UNC PATH</span><span>SYSNATIVE</span><span>POWERSHELL</span>
+                </div>
+            </div>
+            <!-- 07 AI -->
+            <div class="mod-card" style="grid-column:1/-1">
+                <div class="mod-top">
+                    <span class="mod-num">07</span>
+                    <div class="mod-icon"><i class="fas fa-robot"></i></div>
+                </div>
+                <div class="mod-label">AI ASSISTANT &nbsp;<span style="background:#f59e0b;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">ВРЕМЕННО ОТКЛЮЧЁН</span></div>
+                <h3>NoVir AI Assistant</h3>
+                <p>Встроенный диалоговый ИИ-ассистент на базе <strong>openai/gpt-oss-120b</strong> через Groq API. Специально настроен как эксперт по восстановлению Windows. Автоматически предлагает помощь через 5 секунд после обнаружения проблем. Умеет вносить изменения в систему с разрешения пользователя (EXECUTE-режим). <em style="color:#f59e0b">В v2.5 временно отключён — активно исправляем критические ошибки. Вернётся в 2.5.1.</em></p>
                 <div class="mod-tags" style="margin-top:18px">
-                    <span class="hi">5 МЕТОДОВ ЗАПУСКА</span>
-                    <span>IFEO BYPASS</span><span>UNC PATH</span><span>SYSNATIVE</span><span>POWERSHELL</span><span>COPY TEMP</span>
+                    <span class="hi">GPT-OSS-120B</span>
+                    <span>GROQ API</span><span>EXECUTE MODE</span><span>DIALOG MEMORY</span><span>AUTO-TRIGGER</span>
                 </div>
             </div>
         </div>
@@ -646,7 +674,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.4.2</div>
+                <div class="stat-num">2.5</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -658,35 +686,42 @@
     <div class="container">
         <div class="sec-kicker">NO VIR // ПРОЦЕСС</div>
         <h2 class="sec-title" style="margin-bottom:10px">Как работает NoVir</h2>
-        <p class="sec-sub" style="margin-bottom:52px">Программа работает в 4 этапа — от аудита до подтверждённого восстановления.</p>
+        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
 
-        <div class="steps-grid">
+        <div style="display:grid;grid-template-columns:repeat(6,1fr) ;gap:12px;align-items:center">
             <div class="step-card">
                 <div class="step-num">01</div>
                 <div class="step-ico"><i class="fas fa-search"></i></div>
-                <h3>Аудит</h3>
-                <p>NoVir читает состояние каждого из 12 проверяемых узлов. Никаких изменений — только сбор данных. Результаты отображаются в таблице с цветовыми статусами.</p>
+                <h3>Scan</h3>
+                <p>NoVir читает состояние 12 узлов. Никаких изменений — только сбор данных.</p>
             </div>
             <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
             <div class="step-card">
                 <div class="step-num">02</div>
-                <div class="step-ico"><i class="fas fa-clipboard-list"></i></div>
-                <h3>Отчёт</h3>
-                <p>Каждая найденная проблема описывается: что обнаружено, почему это опасно, и какой именно фикс будет применён — вы знаете всё до нажатия кнопки.</p>
+                <div class="step-ico"><i class="fas fa-brain"></i></div>
+                <h3>Analyze</h3>
+                <p>Анализ гипотез причин: почему проблема возникла и что именно сломано.</p>
             </div>
             <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
             <div class="step-card">
                 <div class="step-num">03</div>
-                <div class="step-ico"><i class="fas fa-shield-alt"></i></div>
-                <h3>Бэкап</h3>
-                <p>Перед применением любого фикса программа автоматически создаёт снимок реестра. Этот шаг нельзя пропустить — безопасность встроена в архитектуру.</p>
+                <div class="step-ico"><i class="fas fa-database"></i></div>
+                <h3>Recovery Point</h3>
+                <p>Снимок реестра, сети, BCD. Ни один фикс не применяется без точки отката.</p>
             </div>
             <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
             <div class="step-card">
                 <div class="step-num">04</div>
                 <div class="step-ico"><i class="fas fa-check-circle"></i></div>
-                <h3>Фикс</h3>
-                <p>Только выбранные вами исправления применяются точечно. После — повторный аудит того же узла для подтверждения результата.</p>
+                <h3>Fix</h3>
+                <p>Только выбранные исправления, точечно. Результат каждого — в журнале.</p>
+            </div>
+            <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+            <div class="step-card">
+                <div class="step-num">05</div>
+                <div class="step-ico"><i class="fas fa-sync-alt"></i></div>
+                <h3>Rescan</h3>
+                <p>Автоматическая повторная проверка тех же узлов. Видно что реально исправлено.</p>
             </div>
         </div>
     </div>
@@ -723,15 +758,30 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.4.2 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.5 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026 — Recovery Engine</div>
+                <ul class="cl-changes">
+                    <li>Полный <strong>Recovery Engine</strong>: Scan → Analyze → гипотезы причин → Recovery Point → Fix → Rescan</li>
+                    <li><strong>Recovery Point</strong> — снимок реестра, сети (dump), служб, BCD и списка драйверов перед каждым фиксом</li>
+                    <li>Автоматический откат реестра и сети; BCD/службы — ручной откат с пошаговой инструкцией</li>
+                    <li>Incident Report — экспорт отчёта в TXT, HTML или <strong>PDF</strong></li>
+                    <li>Новые инструменты: <strong>WinRE/USB Boot</strong>, восстановление драйверов, корреляция Malware-процессов</li>
+                    <li>Переключатель «Обычный / Опытный пользователь» в настройках — скрывает продвинутые функции</li>
+                    <li>Мелкие доработки интерфейса: центровка плиток, новый стиль нижней панели и кнопок</li>
+                    <li>Исправлены ложные статусы DNS, TCP/IP, BCD на реальные проверки</li>
+                    <li><em style="color:#f59e0b">AI Assistant временно отключён — исправляем критические ошибки. Вернётся в 2.5.1.</em></li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.4.2</div>
                 <div class="cl-date">2026</div>
                 <ul class="cl-changes">
-                    <li>Добавлен <strong>NoVir AI Assistant</strong> — встроенный ИИ-чат на базе Groq с памятью диалога</li>
+                    <li>Первая версия <strong>NoVir AI Assistant</strong> — встроенный ИИ-чат на базе Groq</li>
                     <li>ИИ автоматически предлагает помощь через 5 секунд после обнаружения проблем</li>
                     <li>ИИ может вносить изменения в систему после разрешения пользователя (EXECUTE-режим)</li>
-                    <li>Исправлена диагностика DNS — теперь реальная проверка через nslookup вместо ложных срабатываний</li>
-                    <li>Исправлена диагностика TCP/IP — проверка Winsock каталога вместо постоянного WARNING</li>
-                    <li>Исправлена диагностика BCD — корректная работа на UEFI системах и без прав администратора</li>
+                    <li>Исправлена диагностика DNS — nslookup вместо ложных срабатываний</li>
+                    <li>Исправлена диагностика TCP/IP — проверка Winsock каталога</li>
+                    <li>Исправлена диагностика BCD — корректная работа на UEFI и без прав администратора</li>
                 </ul>
             </div>
             <div class="cl-item">
@@ -739,8 +789,7 @@
                 <div class="cl-date">2026</div>
                 <ul class="cl-changes">
                     <li>Добавлен модуль <strong>NoVir CMD</strong> — независимая командная строка с 5 уровнями запуска</li>
-                    <li>Полное исправление системы переводов: теперь DE, PL, FR работают корректно</li>
-                    <li>Добавлен перевод интерфейса (Бэкапы, Диагностика, Запуск сканирования и др.)</li>
+                    <li>Полное исправление системы переводов: DE, PL, FR работают корректно</li>
                     <li>Улучшен обход блокировок (IFEO bypass, UNC path, SysNative, PowerShell)</li>
                 </ul>
             </div>
@@ -752,16 +801,13 @@
                     <li>Rollback Manager: выборочная отмена отдельных фиксов</li>
                     <li>Асинхронные бэкапы — интерфейс больше не замирает</li>
                     <li>Поддержка 6 языков: RU, UK, EN, DE, PL, FR</li>
-                    <li>Расширена диагностика Безопасного режима (SafeBoot ключи)</li>
-                    <li>Диагностика Windows Defender и групповых политик Update</li>
                 </ul>
             </div>
             <div class="cl-item">
                 <div class="cl-ver">v2.3</div>
                 <div class="cl-date">2025</div>
                 <ul class="cl-changes">
-                    <li>Добавлен аудит WMI Repository с автоматическим <code>resetrepository</code></li>
-                    <li>Улучшен модуль диагностики сети: проверка Proxy через реестр</li>
+                    <li>Аудит WMI Repository с автоматическим <code>resetrepository</code></li>
                     <li>Терминальный лог с цветовой маркировкой (OK / WARNING / ERROR)</li>
                     <li>Фикс ассоциаций файлов для <code>.exe</code>, <code>.bat</code>, <code>.cmd</code></li>
                 </ul>
@@ -773,7 +819,6 @@
                     <li>Полный рефакторинг — переход на Qt-интерфейс</li>
                     <li>Smart Diagnostics: первая версия 12-точечного аудита</li>
                     <li>Бэкапы реестра перед каждым фиксом</li>
-                    <li>Разблокировка Regedit, Диспетчера задач, CMD</li>
                 </ul>
             </div>
         </div>
@@ -1007,6 +1052,7 @@
                             <li><strong>Работает локально:</strong> Запросы уходят напрямую на серверы Groq — никаких посредников. Данные о твоей системе передаются только те, что ты видишь в тексте диалога.</li>
                             <li><strong>Память диалога:</strong> ИИ помнит всё, что было сказано в текущей сессии. Ты можешь уточнять, переспрашивать и продолжать с того места, где остановился.</li>
                             <li><strong>Ключ зашифрован:</strong> API-ключ хранится в программе в зашифрованном виде (XOR-обфускация), чтобы его нельзя было найти поиском по коду.</li>
+                            
                         </ul>
                     </div>
 
