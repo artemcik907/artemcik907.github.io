@@ -42,6 +42,12 @@
             width:100%;height:100%;display:block;
         }
 
+        /* Dynamic color adaptation over animated WebGL background */
+        h1, h2, h3, .sec-title, .kicker, .hero-desc {
+            mix-blend-mode: difference;
+            color: #ffffff;
+        }
+
         .container{max-width:1180px;margin:0 auto;padding:0 22px;position:relative;z-index:1}
 
         /* ── HEADER ── */
@@ -453,12 +459,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.5 · Recovery Engine</div>
+            <div class="kicker"><span class="dot"></span> v2.5.1 · Hotfix Release</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
             <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows. Теперь с полноценным Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.5
+                    <i class="fas fa-download"></i> Загрузить v2.5.1
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -467,7 +473,7 @@
                 <div class="hero-divider"></div>
                 <div class="hero-stat"><strong>6</strong><span>ЯЗЫКОВ</span></div>
                 <div class="hero-divider"></div>
-                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5</span></div>
+                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.1</span></div>
                 <div class="hero-divider"></div>
                 <a href="https://github.com/artemcik907/NoVir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://t.me/Fuucksociety67" target="_blank"><i class="fab fa-telegram"></i> Разработчик</a>
@@ -580,9 +586,9 @@
                     <span class="mod-num">07</span>
                     <div class="mod-icon"><i class="fas fa-robot"></i></div>
                 </div>
-                <div class="mod-label">AI ASSISTANT &nbsp;<span style="background:#f59e0b;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">ВРЕМЕННО ОТКЛЮЧЁН</span></div>
+                <div class="mod-label">AI ASSISTANT &nbsp;<span style="background:var(--g);color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">ВСТРОЕН И АКТИВЕН</span></div>
                 <h3>NoVir AI Assistant</h3>
-                <p>Встроенный диалоговый ИИ-ассистент на базе <strong>openai/gpt-oss-120b</strong> через Groq API. Специально настроен как эксперт по восстановлению Windows. Автоматически предлагает помощь через 5 секунд после обнаружения проблем. Умеет вносить изменения в систему с разрешения пользователя (EXECUTE-режим). <em style="color:#f59e0b">В v2.5 временно отключён — активно исправляем критические ошибки. Вернётся в 2.5.1.</em></p>
+                <p>Встроенный диалоговый ИИ-ассистент на базе <strong>openai/gpt-oss-120b</strong> через Groq API. Специально настроен как эксперт по восстановлению Windows. Автоматически предлагает помощь через 5 секунд после обнаружения проблем. Умеет вносить изменения в систему с разрешения пользователя (EXECUTE-режим). <em style="color:#00e87a">В v2.5.1 полностью восстановлен и стабилен: устранены ошибки вылетов и сетевые сбои.</em></p>
                 <div class="mod-tags" style="margin-top:18px">
                     <span class="hi">GPT-OSS-120B</span>
                     <span>GROQ API</span><span>EXECUTE MODE</span><span>DIALOG MEMORY</span><span>AUTO-TRIGGER</span>
@@ -661,7 +667,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.5</div>
+                <div class="stat-num">2.5.1</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -673,7 +679,7 @@
     <div class="container">
         <div class="sec-kicker">NO VIR // ПРОЦЕСС</div>
         <h2 class="sec-title" style="margin-bottom:10px">Как работает NoVir</h2>
-        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
+        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.1 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
 
         <div style="display:grid;grid-template-columns:repeat(6,1fr) ;gap:12px;align-items:center">
             <div class="step-card">
@@ -745,7 +751,18 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.5 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.5.1 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026 — Hotfix Release</div>
+                <ul class="cl-changes">
+                    <li><strong>NoVir AI Assistant восстановлен</strong>: исправлен вылет self.layout shadowing, полноценный доступ к ИИ-чату</li>
+                    <li>Обработка HTTP-ошибок ИИ (401, 429, 5xx), расширенный таймаут и проверка интернет-соединения</li>
+                    <li>Исправлена валидация команд ИИ (parse_ai_command) для системных утилит с полными путями System32</li>
+                    <li>Исправлены ложные срабатывания BCD, TCP/IP и DNS</li>
+                    <li>Мелкие доработки интерфейса: центровка плиток главного экрана, новый стиль нижней панели и кнопок</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.5</div>
                 <div class="cl-date">2026 — Recovery Engine</div>
                 <ul class="cl-changes">
                     <li>Полный <strong>Recovery Engine</strong>: Scan → Analyze → гипотезы причин → Recovery Point → Fix → Rescan</li>
@@ -754,9 +771,6 @@
                     <li>Incident Report — экспорт отчёта в TXT, HTML или <strong>PDF</strong></li>
                     <li>Новые инструменты: <strong>WinRE/USB Boot</strong>, восстановление драйверов, корреляция Malware-процессов</li>
                     <li>Переключатель «Обычный / Опытный пользователь» в настройках — скрывает продвинутые функции</li>
-                    <li>Мелкие доработки интерфейса: центровка плиток, новый стиль нижней панели и кнопок</li>
-                    <li>Исправлены ложные статусы DNS, TCP/IP, BCD на реальные проверки</li>
-                    <li><em style="color:#f59e0b">AI Assistant временно отключён — исправляем критические ошибки. Вернётся в 2.5.1.</em></li>
                 </ul>
             </div>
             <div class="cl-item">
