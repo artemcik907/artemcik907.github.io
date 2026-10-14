@@ -459,12 +459,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.5.1 · Hotfix Release</div>
+            <div class="kicker"><span class="dot"></span> v2.5.3 · Windows Compatibility</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
             <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows. Теперь с полноценным Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.5.1
+                    <i class="fas fa-download"></i> Загрузить v2.5.3
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -473,7 +473,7 @@
                 <div class="hero-divider"></div>
                 <div class="hero-stat"><strong>6</strong><span>ЯЗЫКОВ</span></div>
                 <div class="hero-divider"></div>
-                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.1</span></div>
+                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.3</span></div>
                 <div class="hero-divider"></div>
                 <a href="https://github.com/artemcik907/NoVir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://t.me/Fuucksociety67" target="_blank"><i class="fab fa-telegram"></i> Разработчик</a>
@@ -667,7 +667,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.5.1</div>
+                <div class="stat-num">2.5.3</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -679,7 +679,7 @@
     <div class="container">
         <div class="sec-kicker">NO VIR // ПРОЦЕСС</div>
         <h2 class="sec-title" style="margin-bottom:10px">Как работает NoVir</h2>
-        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.1 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
+        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.3 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
 
         <div style="display:grid;grid-template-columns:repeat(6,1fr) ;gap:12px;align-items:center">
             <div class="step-card">
@@ -731,7 +731,7 @@
             </div>
             <div>
                 <div class="req-grid">
-                    <div class="req-row"><span class="req-key">ОС</span><span class="req-val">Windows 7 / 8.1 / 10 / 11 (только 64 бит)</span></div>
+                    <div class="req-row"><span class="req-key">ОС</span><span class="req-val">Windows 7 / 8 / 8.1 / 10 / 11 (64 бит) — версия выбирается в настройках</span></div>
                     <div class="req-row"><span class="req-key">Права</span><span class="req-val">Администратор (обязательно — для правки реестра)</span></div>
                     <div class="req-row"><span class="req-key">RAM</span><span class="req-val">от 256 МБ (рекомендуется 512 МБ)</span></div>
                     <div class="req-row"><span class="req-key">Диск</span><span class="req-val">~50 МБ для программы + место под бэкапы реестра</span></div>
@@ -751,7 +751,32 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.5.1 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.5.3 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026 — Windows Compatibility</div>
+                <ul class="cl-changes">
+                    <li><strong>Поддержка старых версий Windows</strong>: новая настройка «Версия Windows» — автоопределение или ручной выбор Windows 11 / 10 / 8.1 / 8 / 7</li>
+                    <li>Выбранная версия сохраняется в <code>settings.json</code> и действует на все функции</li>
+                    <li><strong>13 функций адаптированы</strong> под разные версии Windows (Безопасность, Сеть, Очистка, Диагностика)</li>
+                    <li>SMBv1 Off: Win7 — реестр <code>SMB1=0</code>, Win8+ — DISM · Defender Update: Win7/8 — <code>MpCmdRun.exe</code>, Win10+ — PowerShell</li>
+                    <li>SmartScreen на Win7 — AppHost-фильтр, на Win8+ — политики; CFA, RunAsPPL и SecureBoot сообщают о несовместимости вместо молчаливого сбоя</li>
+                    <li>Win10/11 — поведение по умолчанию сохранено; остальные ~100 функций проверены и совместимы</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.5.2</div>
+                <div class="cl-date">2026 — Keyboard &amp; Security</div>
+                <ul class="cl-changes">
+                    <li><strong>Вкладка «Клавиатура» — 11 инструментов</strong>: Scancode Reset, FilterKeys, NumLock Fix, MouseKeys, Раскладка RU/EN, Панель языка, Экранные клавиши, Диагностика KB, Выполнить, Горячие клавиши, Чистка политик Win+</li>
+                    <li><strong>Вкладка «Безопасность» — 14 инструментов</strong>: Security Audit, Брандмауэр, SmartScreen, Анти-шифровальщик, SMBv1, WDigest, LSA Protect, RDP, Гостевая запись, WSH, UAC Max, SecureBoot, BitLocker, Defender Update</li>
+                    <li>Рискованные функции (RDP, WSH, SMBv1, LSA, UAC Max) — с предупреждением перед выполнением</li>
+                    <li><strong>Полная поддержка 6 языков</strong> (RU, UK, EN, DE, PL, FR) + пословный fallback примерно на 1205 слов</li>
+                    <li><strong>Сообщество</strong>: встроенный чат с ботом <code>@novir_ai</code>, ответы на сообщения, упоминания, удаление своих сообщений</li>
+                    <li>Оптимизация запуска: дашборд открывается сразу, остальные страницы грузятся после показа окна</li>
+                    <li>Удалена кнопка «Хотфикс»; итого добавлено <strong>25 новых инструментов</strong></li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.5.1</div>
                 <div class="cl-date">2026 — Hotfix Release</div>
                 <ul class="cl-changes">
                     <li><strong>NoVir AI Assistant восстановлен</strong>: исправлен вылет self.layout shadowing, полноценный доступ к ИИ-чату</li>
@@ -806,7 +831,7 @@
             </div>
             <div class="cl-item">
                 <div class="cl-ver">v2.3</div>
-                <div class="cl-date">2025</div>
+                <div class="cl-date">2026</div>
                 <ul class="cl-changes">
                     <li>Аудит WMI Repository с автоматическим <code>resetrepository</code></li>
                     <li>Терминальный лог с цветовой маркировкой (OK / WARNING / ERROR)</li>
@@ -814,8 +839,19 @@
                 </ul>
             </div>
             <div class="cl-item">
+                <div class="cl-ver">v2.1</div>
+                <div class="cl-date">2026 — Security Hardening</div>
+                <ul class="cl-changes">
+                    <li>Восстановление рабочего вида Windows: панель задач, проводник, контекстное меню, шрифты, сетевые параметры, автозагрузка и доступ к системным инструментам</li>
+                    <li><strong>Усиление безопасности</strong>: улучшена проверка путей и безопасный запуск системных команд</li>
+                    <li>Аудит базовых настроек Windows и более надёжная диагностика без опасных изменений</li>
+                    <li>Простой запуск: скачать готовый <code>.exe</code>, выбрать нужный модуль и выполнить восстановление</li>
+                    <li>Рекомендуется запуск от имени администратора; перед серьёзными изменениями — точка восстановления Windows</li>
+                </ul>
+            </div>
+            <div class="cl-item">
                 <div class="cl-ver">v2.0</div>
-                <div class="cl-date">2024</div>
+                <div class="cl-date">2026</div>
                 <ul class="cl-changes">
                     <li>Полный рефакторинг — переход на Qt-интерфейс</li>
                     <li>Smart Diagnostics: первая версия 12-точечного аудита</li>
@@ -857,6 +893,9 @@
                     </li>
                     <li onclick="switchTab('mod5',this)">
                         <span class="nav-num">06</span> Лог и Языки
+                    </li>
+                    <li onclick="switchTab('modcompat',this)">
+                        <span class="nav-num">07</span> Совместимость
                     </li>
                     <li onclick="switchTab('modai',this)">
                         <span class="nav-num" style="color:#00e87a">AI</span> NoVir AI Assistant
@@ -1113,6 +1152,50 @@
                             <li><strong>Память сбрасывается:</strong> При закрытии окна чата история диалога очищается. Новый сеанс — новый диалог.</li>
                             <li><strong>Не заменяет специалиста:</strong> ИИ очень умный, но в критических случаях (форматирование, восстановление после шифровальщика) всегда делай резервную копию перед применением советов.</li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- MOD_COMPAT -->
+                <div id="modcompat" class="tab-pane">
+                    <h1 class="doc-title"><i class="fas fa-windows"></i> Совместимость с Windows <span class="doc-badge">MOD_07</span></h1>
+                    <p class="doc-lead">Начиная с <strong>v2.5.3</strong> NoVir адаптирует команды под версию твоей Windows. Выбери свою версию в настройках — программа подставит правильные команды для каждой функции.</p>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Поддерживаемые версии</div>
+                        <ul class="doc-list">
+                            <li><strong>Windows 11</strong> — все функции доступны</li>
+                            <li><strong>Windows 10</strong> — все функции доступны</li>
+                            <li><strong>Windows 8.1</strong> — почти всё, кроме защиты от шифровальщиков (CFA)</li>
+                            <li><strong>Windows 8</strong> — нет RunAsPPL (LSA) и Secure Boot-политик</li>
+                            <li><strong>Windows 7</strong> — часть функций заменена на совместимые команды (реестр / MpCmdRun / WMI)</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Настройка «Версия Windows»</div>
+                        <ul class="doc-list">
+                            <li><strong>Автоопределение:</strong> версия определяется по номеру версии и сборки Windows</li>
+                            <li><strong>Ручной выбор:</strong> раздел «Настройки» → выпадающий список Windows 11 / 10 / 8.1 / 8 / 7</li>
+                            <li><strong>Сохранение:</strong> выбор хранится в <code>settings.json</code> и остаётся после перезапуска</li>
+                            <li><strong>Универсальность:</strong> один exe работает на всех поддерживаемых версиях — нужна только правильная настройка</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Адаптация функций под версии</div>
+                        <ul class="doc-list">
+                            <li><strong>SMBv1 Off:</strong> Win7 — реестр <code>SMB1=0</code>, Win8+ — DISM-фича</li>
+                            <li><strong>Defender Update:</strong> Win7/8 — <code>MpCmdRun.exe</code>, Win10+ — PowerShell <code>Update-MpSignature</code></li>
+                            <li><strong>SmartScreen:</strong> Win7 — AppHost-фильтр (IE/проводник), Win8+ — системные политики</li>
+                            <li><strong>Google DNS:</strong> Win7 — WMI-запрос адаптеров, Win8+ — <code>Get-NetAdapter</code></li>
+                            <li><strong>Планировщик задач:</strong> Win7 — <code>schtasks</code>, Win8+ — <code>Get-ScheduledTask</code></li>
+                            <li><strong>Корзина:</strong> Win7/8 — Shell COM, Win8.1+ — <code>Clear-RecycleBin</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <p><i class="fas fa-info-circle" style="color:#63b3ed;margin-right:7px"></i>
+                        Недоступные на данной версии функции (CFA, RunAsPPL, Secure Boot) честно сообщают о несовместимости вместо молчаливого сбоя. На Windows 10/11 поведение по умолчанию полностью сохранено, остальные ~100 функций совместимы со всеми версиями.</p>
                     </div>
                 </div>
 
