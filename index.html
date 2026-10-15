@@ -459,12 +459,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.5.3 · Windows Compatibility</div>
+            <div class="kicker"><span class="dot"></span> v2.5.4 · Localization &amp; WinPE</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
             <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows. Теперь с полноценным Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.5.3
+                    <i class="fas fa-download"></i> Загрузить v2.5.4
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -473,7 +473,7 @@
                 <div class="hero-divider"></div>
                 <div class="hero-stat"><strong>6</strong><span>ЯЗЫКОВ</span></div>
                 <div class="hero-divider"></div>
-                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.3</span></div>
+                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.4</span></div>
                 <div class="hero-divider"></div>
                 <a href="https://github.com/artemcik907/NoVir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://t.me/Fuucksociety67" target="_blank"><i class="fab fa-telegram"></i> Разработчик</a>
@@ -489,9 +489,9 @@
             <div>
                 <div class="sec-kicker">NO VIR // CORE</div>
                 <h2 class="sec-title">Архитектура системы</h2>
-                <p class="sec-sub" style="margin-top:10px">Четыре независимых модуля — каждый отвечает за отдельный этап восстановления Windows.</p>
+                <p class="sec-sub" style="margin-top:10px">Восемь независимых модулей — каждый отвечает за отдельный этап восстановления Windows.</p>
             </div>
-            <div class="mod-count"><strong>07</strong><span>МОДУЛЕЙ</span></div>
+            <div class="mod-count"><strong>08</strong><span>МОДУЛЕЙ</span></div>
         </div>
 
         <div class="modules-grid">
@@ -594,6 +594,20 @@
                     <span>GROQ API</span><span>EXECUTE MODE</span><span>DIALOG MEMORY</span><span>AUTO-TRIGGER</span>
                 </div>
             </div>
+            <!-- 08 WINRE -->
+            <div class="mod-card" style="grid-column:1/-1">
+                <div class="mod-top">
+                    <span class="mod-num">08</span>
+                    <div class="mod-icon"><i class="fab fa-usb"></i></div>
+                </div>
+                <div class="mod-label">RECOVERY ENVIRONMENT <span style="background:var(--g);color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.5.4</span></div>
+                <h3>WinRE &amp; WinPE</h3>
+                <p>Перезагрузка в среду восстановления Windows (WinRE) в один клик — когда система не загружается. Создание загрузочной WinPE-флешки средствами Windows ADK: выбор USB-накопителя, загрузчик Secure Boot (UEFI CA 2023) и предупреждение с подтверждением перед форматированием.</p>
+                <div class="mod-tags">
+                    <span class="hi">WINRE</span>
+                    <span>WINPE</span><span>ADK</span><span>UEFI CA 2023</span><span>SECURE BOOT</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -667,7 +681,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.5.3</div>
+                <div class="stat-num">2.5.4</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -679,7 +693,7 @@
     <div class="container">
         <div class="sec-kicker">NO VIR // ПРОЦЕСС</div>
         <h2 class="sec-title" style="margin-bottom:10px">Как работает NoVir</h2>
-        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.3 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
+        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.4 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
 
         <div style="display:grid;grid-template-columns:repeat(6,1fr) ;gap:12px;align-items:center">
             <div class="step-card">
@@ -751,7 +765,26 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.5.3 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.5.4 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026 — Localization &amp; WinPE</div>
+                <ul class="cl-changes">
+                    <li><strong>Выбор языка при первом запуске</strong>: по умолчанию используется английский; язык всегда можно изменить в настройках</li>
+                    <li><strong>Дополнены переводы</strong> интерфейса, настроек, окон восстановления и сообщества: кнопки, диалоги, уведомления, ошибки и контекстные меню на 6 языках. Добавлено 72 ключа — всего 390; в переводах на английский, немецкий, польский и французский не осталось кириллицы</li>
+                    <li>Строка <strong>«Версия Windows»</strong> на главной: иконка выбранной системы, крупное название и индикатор режима «Авто/Вручную»</li>
+                    <li>В список версий <strong>Windows 7, 8, 10 и 11</strong> добавлены иконки</li>
+                    <li>В настройках появилась <strong>ссылка на сайт NoVir</strong></li>
+                    <li>Исправлена кнопка <strong>«Всегда поверх окон»</strong></li>
+                    <li>В раздел «Дополнительные инструменты» добавлено <strong>создание загрузочной WinPE-флешки</strong>: выбор USB-накопителя и загрузчика Secure Boot, предупреждение с запросом подтверждения перед форматированием</li>
+                    <li>Добавлена <strong>перезагрузка в среду восстановления Windows (WinRE)</strong></li>
+                    <li>Исправлена работа <strong>Supabase и Groq</strong>: запросы Supabase теперь отправляются с User-Agent и увеличенным таймаутом; для Groq настроены User-Agent, низкий уровень reasoning и увеличенный лимит токенов. Бот @novir_ai сообщает о недоступности вместо отправки пустых сообщений</li>
+                    <li>Бот <strong>@novir_ai получил контекст чата</strong>: последние 20 сообщений, ответы и упоминания</li>
+                    <li>Исправлено завершение приложения с работающими потоками (<code>QThread: Destroyed while thread is still running</code>)</li>
+                    <li>Обновлены элементы интерфейса и повышена безопасность некоторых системных действий</li>
+                    <li style="color:var(--muted)">Для создания WinPE-флешки необходимо установить Windows ADK и дополнение WinPE. Флешка содержит базовую WinPE x64 и не включает приложение NoVir.</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.5.3</div>
                 <div class="cl-date">2026 — Windows Compatibility</div>
                 <ul class="cl-changes">
                     <li><strong>Поддержка старых версий Windows</strong>: новая настройка «Версия Windows» — автоопределение или ручной выбор Windows 11 / 10 / 8.1 / 8 / 7</li>
@@ -896,6 +929,9 @@
                     </li>
                     <li onclick="switchTab('modcompat',this)">
                         <span class="nav-num">07</span> Совместимость
+                    </li>
+                    <li onclick="switchTab('modwinre',this)">
+                        <span class="nav-num">08</span> WinRE и WinPE
                     </li>
                     <li onclick="switchTab('modai',this)">
                         <span class="nav-num" style="color:#00e87a">AI</span> NoVir AI Assistant
@@ -1075,6 +1111,38 @@
                         </ul>
                         <br>
                         <p style="color:var(--muted);font-size:.9rem">Переключение языка — мгновенное, без перезапуска. Все системные сообщения и лог переводятся в реальном времени.</p>
+                        <p style="color:var(--muted);font-size:.9rem;margin-top:8px">При первом запуске NoVir предлагает выбрать язык — по умолчанию используется английский. Выбор сохраняется и в любой момент меняется в настройках.</p>
+                    </div>
+                </div>
+
+                <!-- MOD_WINRE -->
+                <div id="modwinre" class="tab-pane">
+                    <h1 class="doc-title"><i class="fab fa-usb"></i> WinRE и WinPE <span class="doc-badge">MOD_08</span></h1>
+                    <p class="doc-lead">Восстановление, когда система не загружается: перезагрузка в среду WinRE в один клик и создание загрузочной WinPE-флешки средствами официальных инструментов Windows ADK.</p>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Перезагрузка в WinRE</div>
+                        <ul class="doc-list">
+                            <li><strong>Что это:</strong> Windows Recovery Environment — встроенная среда восстановления, которая работает даже когда основная система не стартует.</li>
+                            <li><strong>Как работает:</strong> NoVir настраивает однократную загрузку в WinRE командой <code>reagentc /boottore</code> и перезагружает компьютер через 5 секунд.</li>
+                            <li><strong>Что умеет WinRE:</strong> Восстановление при загрузке, откат системы, проверка диска, командная строка, сброс параметров Windows.</li>
+                            <li><strong>Требование:</strong> права администратора; NoVir сообщит, если среда восстановления недоступна или отключена.</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-section">
+                        <div class="doc-section-title">Создание загрузочной WinPE-флешки</div>
+                        <ul class="doc-list">
+                            <li><strong>Как работает:</strong> используются официальные инструменты Windows ADK — <code>copype</code> собирает образ, <code>MakeWinPEMedia</code> записывает его на USB-накопитель.</li>
+                            <li><strong>Выбор накопителя:</strong> программа показывает список съёмных USB-устройств; перед форматированием отображается предупреждение с запросом подтверждения.</li>
+                            <li><strong>Загрузчик Secure Boot:</strong> можно записать загрузчик <code>UEFI CA 2023</code> для современных устройств (требуется ADK от декабря 2024 или новее).</li>
+                            <li><strong>Содержимое:</strong> базовая WinPE x64 — командная строка и средства восстановления Windows. Приложение NoVir в образ не входит.</li>
+                        </ul>
+                    </div>
+
+                    <div class="warn-box">
+                        <h5><i class="fas fa-exclamation-triangle"></i> Важно</h5>
+                        <p>Для создания WinPE-флешки необходимо установить Windows ADK и отдельное дополнение Windows PE. Все данные на выбранном USB-накопителе будут удалены — флешка будет отформатирована.</p>
                     </div>
                 </div>
 
