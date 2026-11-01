@@ -459,12 +459,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.5.5 · Folders &amp; Safe Mode</div>
+            <div class="kicker"><span class="dot"></span> v2.5.6 · Новые сканеры и инструменты</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
             <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows. Теперь с полноценным Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.5.5
+                    <i class="fas fa-download"></i> Загрузить v2.5.6
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -473,7 +473,7 @@
                 <div class="hero-divider"></div>
                 <div class="hero-stat"><strong>6</strong><span>ЯЗЫКОВ</span></div>
                 <div class="hero-divider"></div>
-                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.5</span></div>
+                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.6</span></div>
                 <div class="hero-divider"></div>
                 <a href="https://github.com/artemcik907/NoVir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://t.me/Fuucksociety67" target="_blank"><i class="fab fa-telegram"></i> Разработчик</a>
@@ -681,7 +681,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.5.5</div>
+                <div class="stat-num">2.5.6</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -693,7 +693,7 @@
     <div class="container">
         <div class="sec-kicker">NO VIR // ПРОЦЕСС</div>
         <h2 class="sec-title" style="margin-bottom:10px">Как работает NoVir</h2>
-        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.5 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
+        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.6 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
 
         <div style="display:grid;grid-template-columns:repeat(6,1fr) ;gap:12px;align-items:center">
             <div class="step-card">
@@ -765,7 +765,25 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.5.5 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.5.6 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026 — WMI, ADS и память процессов</div>
+                <ul class="cl-changes">
+                    <li><strong>Новые сканеры и инструменты</strong>: WMI Event Persistence Sweeper, NTFS ADS detector, Process Memory Inspector</li>
+                    <li><strong>WMI Event Persistence Sweeper</strong> для обнаружения подозрительных WMI-подписок в <code>root\subscription</code></li>
+                    <li><strong>Сканер NTFS ADS</strong> для поиска альтернативных потоков данных и меток <code>Zone.Identifier</code></li>
+                    <li><strong>Process Memory Inspector</strong> для анализа виртуальной памяти, RWX-областей, PE-заголовков и различий между файлом на диске и его копией в памяти</li>
+                    <li>Улучшена точность обнаружения и снижено количество ложных срабатываний</li>
+                    <li>Автоматическое сохранение доказательств с fallback-путями: <code>%APPDATA%\NoVir\WMI_Persistence</code>, <code>%APPDATA%\NoVir\ADS_Scan</code>, <code>%APPDATA%\NoVir\Process_Memory</code></li>
+                    <li>При невозможности сохранения используется <code>NoVir_Backups</code> или временная папка</li>
+                    <li><strong>Интерфейс Minimal B&W</strong>: добавлен собственный процедурный курсор, отрисовываемый в памяти; переработаны диспетчер задач, редактор реестра и управление дисками; добавлена защита системного диска C: от операций форматирования и удаления разделов</li>
+                    <li><strong>Автозагрузка</strong>: обновлён интерфейс в стиле Minimal B&W, контрастное выделение активных вкладок, переработаны таблицы, цветовая классификация легитимных, нейтральных и подозрительных записей, улучшено отображение файлов</li>
+                    <li><strong>WinPE / WinRE</strong>: исправлены ошибки загрузки QtWidgets, ранняя регистрация DLL PySide6/shiboken6, программный рендеринг для WinPE, улучшена упаковка PyInstaller, отключено сжатие UPX для совместимости</li>
+                    <li><strong>Исправления и стабильность</strong>: устранены вылеты диспетчера задач, рекурсия в <code>_safe_summary_text</code>, работа заголовков таблиц, защита от обращений к удалённым элементам интерфейса, ленивая инициализация состояния папок планировщика</li>
+                    <li>Добавлены переводы новых инструментов и изменений интерфейса на 6 языков; обновлены каталог функций и маршрутизация задач</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.5.5</div>
                 <div class="cl-date">2026 — Folders &amp; Safe Mode</div>
                 <ul class="cl-changes">
                     <li><strong>Планировщик задач</strong> переработан: дерево папок и три колонки «Имя / Расположение / Состояние», иконки папок и задач, корневые задачи после папок</li>
@@ -886,12 +904,40 @@
                 </ul>
             </div>
             <div class="cl-item">
+                <div class="cl-ver">v2.3.1</div>
+                <div class="cl-date">2026</div>
+                <ul class="cl-changes">
+                    <li>Отредактированы встроенные утилиты: мягкая тёмная тема, улучшенный интерфейс, реальный редактор реестра, устранён белый и нечитабельный стиль, очищены лишние части UI.</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.3.0</div>
+                <div class="cl-date">2026</div>
+                <ul class="cl-changes">
+                    <li>Обновлён интерфейс программы, прогресс в визуале, исправления в диспетчере задач и настройках.</li>
+                </ul>
+            </div>
+            <div class="cl-item">
                 <div class="cl-ver">v2.3</div>
                 <div class="cl-date">2026</div>
                 <ul class="cl-changes">
                     <li>Аудит WMI Repository с автоматическим <code>resetrepository</code></li>
                     <li>Терминальный лог с цветовой маркировкой (OK / WARNING / ERROR)</li>
                     <li>Фикс ассоциаций файлов для <code>.exe</code>, <code>.bat</code>, <code>.cmd</code></li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.1.2</div>
+                <div class="cl-date">2026</div>
+                <ul class="cl-changes">
+                    <li>Добавлено 10+ хардкорных фиксов: AppInit_DLLs, DisallowRun, SafeBoot, Defender и т.д.</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.1.1</div>
+                <div class="cl-date">2026</div>
+                <ul class="cl-changes">
+                    <li>Новый раздел Клавиатура, фикс запроса прав администратора.</li>
                 </ul>
             </div>
             <div class="cl-item">
@@ -912,6 +958,13 @@
                     <li>Полный рефакторинг — переход на Qt-интерфейс</li>
                     <li>Smart Diagnostics: первая версия 12-точечного аудита</li>
                     <li>Бэкапы реестра перед каждым фиксом</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v1.x</div>
+                <div class="cl-date">Ранние версии</div>
+                <ul class="cl-changes">
+                    <li>Консольная версия с функциями восстановления.</li>
                 </ul>
             </div>
         </div>
