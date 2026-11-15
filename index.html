@@ -459,12 +459,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.5.6 · Новые сканеры и инструменты</div>
+            <div class="kicker"><span class="dot"></span> v2.5.7 · Масштабное обновление</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
-            <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок и безопасного отката изменений в Windows. Теперь с полноценным Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
+            <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок, аудита бэкдоров и безопасного отката изменений в Windows. Версия 2.5.7: умный поиск инструментов, аудит подмен системных файлов и IFEO-перехватчиков, восстановление загрузки BCD, снятие 12 ограничений, улучшенная автозагрузка и интерактивный снеговик-помощник. Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.5.6
+                    <i class="fas fa-download"></i> Загрузить v2.5.7
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -473,7 +473,7 @@
                 <div class="hero-divider"></div>
                 <div class="hero-stat"><strong>6</strong><span>ЯЗЫКОВ</span></div>
                 <div class="hero-divider"></div>
-                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.6</span></div>
+                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.7</span></div>
                 <div class="hero-divider"></div>
                 <a href="https://github.com/artemcik907/NoVir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://t.me/Fuucksociety67" target="_blank"><i class="fab fa-telegram"></i> Разработчик</a>
@@ -580,20 +580,35 @@
                     <span>IFEO BYPASS</span><span>UNC PATH</span><span>SYSNATIVE</span><span>POWERSHELL</span>
                 </div>
             </div>
-            <!-- 07 AI -->
-            <div class="mod-card" style="grid-column:1/-1">
-                <div class="mod-top">
-                    <span class="mod-num">07</span>
-                    <div class="mod-icon"><i class="fas fa-robot"></i></div>
-                </div>
-                <div class="mod-label">AI ASSISTANT &nbsp;<span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">ВСТРОЕН · BETA</span></div>
-                <h3>NoVir AI Assistant</h3>
-                <p>Встроенный диалоговый ИИ-ассистент <strong>NoVir AI</strong>. Открывается вручную из верхней панели приложения. Строгий чёрно-белый интерфейс, память текущего диалога и EXECUTE-режим: изменения в системе выполняются только после явного подтверждения. <em style="color:#aaaaaa">BETA: возможны ошибки.</em></p>
-                <div class="mod-tags" style="margin-top:18px">
-                    <span class="hi">NOVIR AI</span>
-                    <span>EXECUTE MODE</span><span>DIALOG MEMORY</span><span>B&amp;W MINIMAL</span>
-                </div>
-            </div>
+             <!-- 07 BACKDOOR -->
+             <div class="mod-card" style="grid-column:1/-1">
+                 <div class="mod-top">
+                     <span class="mod-num">07</span>
+                     <div class="mod-icon"><i class="fas fa-shield-virus"></i></div>
+                 </div>
+                 <div class="mod-label">BACKDOOR AUDIT <span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.5.7</span></div>
+                 <h3>Аудит подмен и бэкдоров</h3>
+                 <p>Проверка системных файлов (sethc, utilman, osk, narrator, magnify, displayswitch, atbroker) на подмену хэшей и размеров. Сканирование Image File Execution Options на перехватчики Debugger. Удаление обнаруженных бэкдоров без карантина.</p>
+                 <div class="mod-tags" style="margin-top:18px">
+                     <span class="hi">IFEO</span>
+                     <span>STICKY KEYS</span><span>HASH CHECK</span><span>BACKDOOR</span>
+                 </div>
+             </div>
+             <!-- 08 SNOWMAN -->
+             <div class="mod-card" style="grid-column:1/-1">
+                 <div class="mod-top">
+                     <span class="mod-num">08</span>
+                     <div class="mod-icon"><i class="fas fa-snowman"></i></div>
+                 </div>
+                 <div class="mod-label">SNOWMAN ASSISTANT <span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.5.7</span></div>
+                 <h3>Снеговик-помощник</h3>
+                 <p>Интерактивный прозрачный оверлей прямо внутри окна NoVir. 9 эмоциональных состояний, пузырь с подсказками сбоку, перетаскивание и сохранение позиции, реакция на диагностику и лечение. Автоматически отключается в WinRE.</p>
+                 <div class="mod-tags" style="margin-top:18px">
+                     <span class="hi">OVERLAY</span>
+                     <span>9 ЭМОЦИЙ</span><span>ПЕРЕТАСКИВАНИЕ</span><span>WINRE-SAFE</span>
+                 </div>
+             </div>
+             <!-- 09 WINRE -->
             <!-- 08 WINRE -->
             <div class="mod-card" style="grid-column:1/-1">
                 <div class="mod-top">
@@ -681,7 +696,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.5.6</div>
+                <div class="stat-num">2.5.7</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -693,7 +708,7 @@
     <div class="container">
         <div class="sec-kicker">NO VIR // ПРОЦЕСС</div>
         <h2 class="sec-title" style="margin-bottom:10px">Как работает NoVir</h2>
-        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.6 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
+        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.7 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
 
         <div style="display:grid;grid-template-columns:repeat(6,1fr) ;gap:12px;align-items:center">
             <div class="step-card">
@@ -749,7 +764,7 @@
                     <div class="req-row"><span class="req-key">Права</span><span class="req-val">Администратор (обязательно — для правки реестра)</span></div>
                     <div class="req-row"><span class="req-key">RAM</span><span class="req-val">от 256 МБ (рекомендуется 512 МБ)</span></div>
                     <div class="req-row"><span class="req-key">Диск</span><span class="req-val">~50 МБ для программы + место под бэкапы реестра</span></div>
-                    <div class="req-row"><span class="req-key">Сеть</span><span class="req-val">Требуеться для роботы с ИИ - для конкретных задач НЕТ</span></div>
+                    <div class="req-row"><span class="req-key">Сеть</span><span class="req-val">Опционально — для обновлений и сообщества; основные функции работают офлайн</span></div>
                     <div class="req-row"><span class="req-key">Runtime</span><span class="req-val">Встроен в дистрибутив — ничего не нужно устанавливать</span></div>
                     <div class="req-row"><span class="req-key">Антивирус</span><span class="req-val">Может потребоваться добавить в исключения (работа с реестром)</span></div>
                 </div>
@@ -765,10 +780,26 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.5.6 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.5.7 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026 — Масштабное обновление</div>
+                <ul class="cl-changes">
+                    <li><strong>Очистка кодовой базы:</strong> полностью удалён модуль NoVirGPT, кнопка <code>btn_ai</code> и диалог <code>NoVirAIChatDialog</code>; убраны офлайн-функции запросов</li>
+                    <li><strong>Интерфейс B&W:</strong> устранён кислотно-зелёный цвет, весь UI приведён к монохромной схеме (чёрный/белый/серый)</li>
+                    <li><strong>Умный поиск:</strong> поисковая строка в «Дополнительные возможности» с системой семантических синонимов для 40+ карточек; динамическое скрытие несовпадающих карточек</li>
+                    <li><strong>Аудит подмен и бэкдоров:</strong> новый инструмент — проверка sethc, utilman, osk, narrator, magnify, displayswitch, atbroker на подмену хэшей/размеров; сканирование IFEO на перехватчики Debugger</li>
+                    <li><strong>Восстановление загрузки:</strong> кнопка «ВОССТАНОВИТЬ ЗАГРУЗКУ», пересборка BCD через BCDBoot; поддержка Live, Offline и WinRE</li>
+                    <li><strong>Снятие 12 ограничений:</strong> диспетчер задач, regedit, CMD, панель управления, UAC, групповые политики и др. в трёх режимах (Live/Offline/WinRE)</li>
+                    <li><strong>Автозагрузка:</strong> закрепление конкретной записи после добавления/редактирования; чтение автозагрузки Offline из реестра выбранного диска; детекция «провокаторов» с удалением без карантина; сравнение изменений (Diff)</li>
+                    <li><strong>Offline/WinRE:</strong> расширенная совместимость инструментов с различными средами Windows</li>
+                    <li><strong>Снеговик-помощник:</strong> прозрачный оверлей внутри окна, 9 эмоциональных состояний, пузырь с подсказками, перетаскивание и сохранение позиции, реакция на диагностику и лечение; автоматически отключается в WinRE</li>
+                    <li><strong>Настройки:</strong> <code>snowman_enabled</code>, <code>snowman_x</code>, <code>snowman_y</code></li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.5.6</div>
                 <div class="cl-date">2026 — WMI, ADS и память процессов</div>
                 <ul class="cl-changes">
-                    <li><strong>Новые сканеры и инструменты</strong>: WMI Event Persistence Sweeper, NTFS ADS detector, Process Memory Inspector</li>
+                    <li><strong>Масштабное обновление</strong>: WMI Event Persistence Sweeper, NTFS ADS detector, Process Memory Inspector</li>
                     <li><strong>WMI Event Persistence Sweeper</strong> для обнаружения подозрительных WMI-подписок в <code>root\subscription</code></li>
                     <li><strong>Сканер NTFS ADS</strong> для поиска альтернативных потоков данных и меток <code>Zone.Identifier</code></li>
                     <li><strong>Process Memory Inspector</strong> для анализа виртуальной памяти, RWX-областей, PE-заголовков и различий между файлом на диске и его копией в памяти</li>
@@ -1009,9 +1040,6 @@
                     <li onclick="switchTab('modwinre',this)">
                         <span class="nav-num">08</span> WinRE и WinPE
                     </li>
-                    <li onclick="switchTab('modai',this)">
-                        <span class="nav-num" style="color:#00e87a">AI</span> NoVir AI Assistant
-                    </li>
                 </ul>
                 <div class="help-box">
                     <p>Вопросы по программе?</p>
@@ -1219,83 +1247,6 @@
                     <div class="warn-box">
                         <h5><i class="fas fa-exclamation-triangle"></i> Важно</h5>
                         <p>Для создания WinPE-флешки необходимо установить Windows ADK и отдельное дополнение Windows PE. Все данные на выбранном USB-накопителе будут удалены — флешка будет отформатирована.</p>
-                    </div>
-                </div>
-
-                <!-- MOD_AI -->
-                <div id="modai" class="tab-pane">
-                    <h1 class="doc-title"><i class="fas fa-robot"></i> NoVir AI Assistant <span class="doc-badge" style="background:#fff;color:#000">BETA</span></h1>
-                    <p class="doc-lead">Встроенный интеллектуальный ассистент, который понимает проблемы твоей системы и помогает их решить — в диалоге, с памятью и подтверждаемым выполнением команд.</p>
-
-                    <div class="doc-section">
-                        <div class="doc-section-title">Что такое NoVir AI</div>
-                        <p style="color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:12px">
-                            NoVir AI — это диалоговый ИИ-ассистент на базе модели <strong style="color:#e0e0e0">NoVir AI</strong>. Он специально настроен как эксперт по восстановлению Windows: знает реестр, сетевые параметры, загрузчики, политики и типичные вирусные паттерны. Отвечает кратко и по делу.
-                        </p>
-                        <ul class="doc-list">
-                            <li><strong>Прямое подключение:</strong> NoVir AI обрабатывает запросы напрямую, без посредников. Передаются только те данные, которые ты сам видишь в тексте диалога.</li>
-                            <li><strong>Память диалога:</strong> ИИ помнит всё, что было сказано в текущей сессии. Ты можешь уточнять, переспрашивать и продолжать с того места, где остановился.</li>
-                            <li><strong>Приватность:</strong> история диалога хранится только в текущей сессии и не публикуется.</li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="doc-section">
-                        <div class="doc-section-title">Как открыть ИИ</div>
-                        <ul class="doc-list">
-                            <li><strong>Кнопка AI ASSISTANT:</strong> Нажми её на верхней панели приложения — откроется чат.</li>
-                            <li><strong>Без автозапуска:</strong> ИИ не открывается сам и не показывает всплывающих окон. Только ручной запуск.</li>
-                            <li><strong>Опиши проблему:</strong> Можно вставить результаты диагностики или задать вопрос своими словами.</li>
-                            <li><strong>История диалога:</strong> ИИ помнит текущую сессию, поэтому можно уточнять и продолжать с того же места.</li>
-                        </ul>
-                    </div>
-
-                    <div class="doc-section">
-                        <div class="doc-section-title">Как работает диалог</div>
-                        <ul class="doc-list">
-                            <li><strong>Ты пишешь — ИИ отвечает:</strong> Поле ввода внизу окна. Нажми Enter или кнопку «Отправить».</li>
-                            <li><strong>Уточняй сколько угодно:</strong> Не понял ответ — переспроси. ИИ помнит контекст и адаптирует объяснение.</li>
-                            <li><strong>Монохромный чат:</strong> ответы ИИ — белым, твои сообщения — серым, системные уведомления — приглушённым серым. Строгий B&amp;W-стиль без цветных акцентов.</li>
-                        </ul>
-                    </div>
-
-                    <div class="doc-section">
-                        <div class="doc-section-title">Режим внесения изменений (EXECUTE)</div>
-                        <p style="color:var(--muted);font-size:.95rem;line-height:1.7;margin-bottom:12px">
-                            ИИ умеет не только советовать, но и действовать. Если он считает, что проблему можно решить командой — он спросит разрешения.
-                        </p>
-                        <ul class="doc-list">
-                            <li><strong>Запрос разрешения:</strong> ИИ пишет «Могу ли я внести изменения в системе?» — ты отвечаешь да / нет / подробности.</li>
-                            <li><strong>Диалог подтверждения:</strong> Перед выполнением появляется отдельное окно с точной командой, которую хочет запустить ИИ. Ты видишь её полностью и решаешь — разрешить или нет.</li>
-                            <li><strong>Выполнение и анализ:</strong> Если разрешил — команда выполняется, вывод автоматически отправляется обратно ИИ. Он читает результат и предлагает следующий шаг.</li>
-                            <li><strong>Отказ:</strong> Если нажал «Нет» — ИИ предложит альтернативный способ или объяснит как сделать вручную.</li>
-                        </ul>
-                        <div class="warn-box">
-                            <h5><i class="fas fa-shield-alt"></i> Безопасность</h5>
-                            <p>ИИ не может ничего сделать без твоего явного подтверждения. Каждая команда показывается в окне подтверждения до выполнения. Ты всегда в контроле.</p>
-                        </div>
-                    </div>
-
-                    <div class="doc-section">
-                        <div class="doc-section-title">Примеры того, что умеет ИИ</div>
-                        <ul class="doc-list">
-                            <li>Объяснить что означает конкретная ошибка диагностики простыми словами</li>
-                            <li>Сбросить настройки DNS и очистить кэш (<code>ipconfig /flushdns</code>, <code>netsh int ip reset</code>)</li>
-                            <li>Разблокировать Диспетчер задач или Regedit через реестр</li>
-                            <li>Очистить автозапуск от подозрительных записей</li>
-                            <li>Проверить состояние служб Windows и включить заблокированные</li>
-                            <li>Дать инструкции по восстановлению BCD или SafeBoot-ключей</li>
-                            <li>Ответить на любой вопрос по Windows — даже не связанный со сканированием</li>
-                        </ul>
-                    </div>
-
-                    <div class="doc-section">
-                        <div class="doc-section-title">Ограничения</div>
-                        <ul class="doc-list">
-                            <li><strong>Требует интернет:</strong> NoVir AI работает через защищённое облачное подключение. Без сети чат недоступен.</li>
-                            <li><strong>Память сбрасывается:</strong> При закрытии окна чата история диалога очищается. Новый сеанс — новый диалог.</li>
-                            <li><strong>Не заменяет специалиста:</strong> ИИ очень умный, но в критических случаях (форматирование, восстановление после шифровальщика) всегда делай резервную копию перед применением советов.</li>
-                        </ul>
                     </div>
                 </div>
 
