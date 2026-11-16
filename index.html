@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>NoVir — Абсолютный контроль над Windows</title>
+    <meta name="description" content="NoVir 2.5.8 — утилита для диагностики, снятия вирусных блокировок и восстановления Windows. Стабильность, фоновые потоки, WinRE и монохромный интерфейс."/>
+    <title>NoVir 2.5.8 — Абсолютный контроль над Windows</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -441,7 +442,7 @@
     <div class="container navbar">
         <a href="#" class="logo">
             <i class="fas fa-shield-alt"></i> NoVir
-            <span class="logo-ver">ACTIVE</span>
+            <span class="logo-ver">v2.5.8</span>
         </a>
         <div class="hamburger"><span></span><span></span><span></span></div>
         <ul class="nav-links">
@@ -459,12 +460,12 @@
 <section class="hero">
     <div class="container">
         <div class="hero-inner">
-            <div class="kicker"><span class="dot"></span> v2.5.7 · Масштабное обновление</div>
+            <div class="kicker"><span class="dot"></span> v2.5.8 · Стабильность и оптимизация</div>
             <h1>Абсолютный контроль<br/>над <em>вашей</em> системой</h1>
-            <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок, аудита бэкдоров и безопасного отката изменений в Windows. Версия 2.5.7: умный поиск инструментов, аудит подмен системных файлов и IFEO-перехватчиков, восстановление загрузки BCD, снятие 12 ограничений, улучшенная автозагрузка и интерактивный снеговик-помощник. Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
+            <p class="hero-desc">Профессиональная утилита для глубокой диагностики, снятия вирусных блокировок, аудита бэкдоров и безопасного восстановления Windows. Версия 2.5.8 — обновление стабильности: устранена утечка памяти в CMD, исправлен запуск с правами администратора, зависания планировщика и драйверов, а WMI и проверка подписей вынесены в фоновые потоки. Recovery Engine: Scan → Analyze → Recovery Point → Fix → Rescan.</p>
             <div class="hero-btns">
                 <a class="btn btn-fill" href="https://github.com/artemcik907/NoVir/releases" target="_blank">
-                    <i class="fas fa-download"></i> Загрузить v2.5.7
+                    <i class="fas fa-download"></i> Загрузить v2.5.8
                 </a>
                 <a class="btn" href="#documentation"><i class="fas fa-book-open"></i> Документация</a>
             </div>
@@ -473,7 +474,7 @@
                 <div class="hero-divider"></div>
                 <div class="hero-stat"><strong>6</strong><span>ЯЗЫКОВ</span></div>
                 <div class="hero-divider"></div>
-                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.7</span></div>
+                <div class="hero-stat"><strong>Recovery</strong><span>ENGINE 2.5.8</span></div>
                 <div class="hero-divider"></div>
                 <a href="https://github.com/artemcik907/NoVir" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://t.me/Fuucksociety67" target="_blank"><i class="fab fa-telegram"></i> Разработчик</a>
@@ -489,9 +490,9 @@
             <div>
                 <div class="sec-kicker">NO VIR // CORE</div>
                 <h2 class="sec-title">Архитектура системы</h2>
-                <p class="sec-sub" style="margin-top:10px">Восемь независимых модулей — каждый отвечает за отдельный этап восстановления Windows.</p>
+                <p class="sec-sub" style="margin-top:10px">Девять независимых модулей — каждый отвечает за отдельный этап восстановления Windows.</p>
             </div>
-            <div class="mod-count"><strong>08</strong><span>МОДУЛЕЙ</span></div>
+            <div class="mod-count"><strong>09</strong><span>МОДУЛЕЙ</span></div>
         </div>
 
         <div class="modules-grid">
@@ -586,7 +587,7 @@
                      <span class="mod-num">07</span>
                      <div class="mod-icon"><i class="fas fa-shield-virus"></i></div>
                  </div>
-                 <div class="mod-label">BACKDOOR AUDIT <span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.5.7</span></div>
+                 <div class="mod-label">BACKDOOR AUDIT <span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">v2.5.7</span></div>
                  <h3>Аудит подмен и бэкдоров</h3>
                  <p>Проверка системных файлов (sethc, utilman, osk, narrator, magnify, displayswitch, atbroker) на подмену хэшей и размеров. Сканирование Image File Execution Options на перехватчики Debugger. Удаление обнаруженных бэкдоров без карантина.</p>
                  <div class="mod-tags" style="margin-top:18px">
@@ -600,7 +601,7 @@
                      <span class="mod-num">08</span>
                      <div class="mod-icon"><i class="fas fa-snowman"></i></div>
                  </div>
-                 <div class="mod-label">SNOWMAN ASSISTANT <span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">NEW v2.5.7</span></div>
+                 <div class="mod-label">SNOWMAN ASSISTANT <span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">v2.5.7</span></div>
                  <h3>Снеговик-помощник</h3>
                  <p>Интерактивный прозрачный оверлей прямо внутри окна NoVir. 9 эмоциональных состояний, пузырь с подсказками сбоку, перетаскивание и сохранение позиции, реакция на диагностику и лечение. Автоматически отключается в WinRE.</p>
                  <div class="mod-tags" style="margin-top:18px">
@@ -609,10 +610,9 @@
                  </div>
              </div>
              <!-- 09 WINRE -->
-            <!-- 08 WINRE -->
             <div class="mod-card" style="grid-column:1/-1">
                 <div class="mod-top">
-                    <span class="mod-num">08</span>
+                    <span class="mod-num">09</span>
                     <div class="mod-icon"><i class="fab fa-usb"></i></div>
                 </div>
                 <div class="mod-label">RECOVERY ENVIRONMENT <span style="background:#fff;color:#000;font-size:.55rem;padding:2px 7px;border-radius:4px;letter-spacing:.1em;font-weight:700">STABLE</span></div>
@@ -696,7 +696,7 @@
                 <div class="stat-label">Аудит — без паники</div>
             </div>
             <div class="stat-card">
-                <div class="stat-num">2.5.7</div>
+                <div class="stat-num">2.5.8</div>
                 <div class="stat-label">Текущая версия</div>
             </div>
         </div>
@@ -708,7 +708,7 @@
     <div class="container">
         <div class="sec-kicker">NO VIR // ПРОЦЕСС</div>
         <h2 class="sec-title" style="margin-bottom:10px">Как работает NoVir</h2>
-        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.7 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
+        <p class="sec-sub" style="margin-bottom:52px">В версии 2.5.8 — полный цикл: от аудита до подтверждённого восстановления с автоматическим повторным сканом.</p>
 
         <div style="display:grid;grid-template-columns:repeat(6,1fr) ;gap:12px;align-items:center">
             <div class="step-card">
@@ -780,7 +780,24 @@
         <h2 class="sec-title" style="margin-bottom:48px">Версии и изменения</h2>
         <div class="changelog-list">
             <div class="cl-item cl-current">
-                <div class="cl-ver">v2.5.7 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-ver">v2.5.8 <span class="cl-tag">ТЕКУЩАЯ</span></div>
+                <div class="cl-date">2026 — Исправление ошибок, оптимизация и стабилизация</div>
+                <ul class="cl-changes">
+                    <li><strong>CMD без утечки памяти:</strong> удалён 240-строчный дубликат старого интерфейса внутри <code>closeEvent</code>; устранено повторное создание фантомных виджетов и компиляция стилей при закрытии; <code>cmd.exe</code> корректно завершается, ресурсы освобождаются.</li>
+                    <li><strong>Монохромная палитра:</strong> удалены последние вхождения <code>#66ff88</code>; исправлены цвета в просмотрщике логов и диалоге восстановления загрузчика; все надписи и консольные выводы переведены на <code>#ffffff</code> / <code>#cccccc</code>.</li>
+                    <li><strong>Запуск от администратора:</strong> исправлен <code>ShellExecuteW("runas")</code>; для PyInstaller-сборок больше не передаётся путь к exe первым аргументом, устранено дублирование <code>argv</code> и аварийное завершение при запросе UAC.</li>
+                    <li><strong>Локализация аудита:</strong> функции аудита подмен и бэкдоров интегрированы в <code>LanguageManager</code>; добавлены переводы EN, UK, DE, PL, FR для статусов «Аудит подмен и бэкдоров», «ПОДМЕНА ОБНАРУЖЕНА!», «ОРИГИНАЛ (OK)», «ПЕРЕХВАТЧИК (DEBUGGER)»; устранено смешивание языков.</li>
+                    <li><strong>Планировщик задач:</strong> добавлен <code>SchedulerLoader(QThread)</code>; задачи и WMI-запросы выполняются вне UI-потока, показывается статус загрузки, работает кэширование; повторный вход не пересоздаёт дерево, обновление идёт через <code>_scheduler_reload_pending</code> без уничтожения потока и ожидания.</li>
+                    <li><strong>Драйверы:</strong> добавлен <code>DriversLoader(QThread)</code>; проверка подписей <code>WinVerifyTrust</code> вынесена в <code>DriverSignatureLoader(QThread)</code>, результаты кэшируются, проверенные пути не обрабатываются повторно; фильтры «Подписанные» и «Подозрительные» больше не подвешивают интерфейс.</li>
+                    <li><strong>Службы:</strong> список кэшируется, повторный вход не запускает полное сканирование; после запуска, остановки, перезапуска и изменения автозагрузки кэш обновляется принудительно. Первый сбор списка пока синхронный.</li>
+                    <li><strong>Потоки:</strong> удалён <code>terminate()</code> для <code>QThread</code>, убраны длительные <code>wait()</code>; остановка через <code>requestInterruption()</code> и <code>quit()</code>, общий лимит ожидания при закрытии — 0,35 секунды; <code>keep_thread</code> защищает работающие <code>QThread</code> от преждевременного уничтожения.</li>
+                    <li><strong>Диалоги:</strong> убраны ожидания до 3 секунд в WMI, до 10 секунд в NTFS ADS и до 5 секунд в Process Memory Inspector; отмена закрывает окно сразу, не дожидаясь фоновой задачи.</li>
+                    <li><strong>Snowman Assistant:</strong> исправлен доступ к <code>speech</code> и <code>view</code> в <code>eventFilter</code> через <code>getattr</code>; <code>self.speech</code> инициализируется в конструкторе; новых ошибок в <code>novir_crash.log</code> после запуска нет.</li>
+                    <li><strong>Итог:</strong> меньше нагрузки на UI-поток, меньше случайных вылетов, стабильное закрытие приложения и более предсказуемая работа автозагрузки, драйверов и служб.</li>
+                </ul>
+            </div>
+            <div class="cl-item">
+                <div class="cl-ver">v2.5.7</div>
                 <div class="cl-date">2026 — Масштабное обновление</div>
                 <ul class="cl-changes">
                     <li><strong>Очистка кодовой базы:</strong> полностью удалён модуль NoVirGPT, кнопка <code>btn_ai</code> и диалог <code>NoVirAIChatDialog</code>; убраны офлайн-функции запросов</li>
